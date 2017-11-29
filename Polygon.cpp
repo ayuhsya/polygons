@@ -21,3 +21,8 @@ const std::string& Polygon::GetName(void) const {
 void Polygon::SetName(const std::string& name) {
 	this->name=name;
 }
+
+// operator overloading
+bool operator<(const Polygon& polygon1, const Polygon& polygon2) {
+	return polygon1.GetSides()<polygon2.GetSides();
+}
